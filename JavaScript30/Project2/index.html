@@ -1,0 +1,37 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, September 10, 2019 -->
+
+<!--Code modified and adapted from https://courses.wesbos.com/account/access/5d6ec90685f96c03c1e56510/view/194129539
+    
+    I chose this JavaScript 30 project because I love games, grew up in the age of the Konami Code, and wanted to see what else I could do with it-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="js30.css" type="text/css">
+        <title>Key Sequence Detection</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h2>Enter a Video Game Code!</h2>
+            <a href="#" id="cheat">[Show Codes]</a>
+            <!--This div holds the image that will be displayed if the Konami Code is pressed correctly-->
+            <div class="hide" id="konamiCode">
+                <img src="images/Contra.jpg" alt="Picture of Video Game Boxart for Contra">
+            </div>
+
+            <!--This div holds the image that will be displayed if the Mortal Kombat code is pressed correctly-->
+            <div class="hide" id="mkCode">
+                <img src="images/mortalkombat.png" alt="Picture of the logo for Mortal Kombat">
+            </div>
+
+            <!--This div holds the image that will be displayed if the Metroid code is pressed correctly-->
+            <div class="hide" id="metroidCode">
+                <img src="images/Metroid.png" alt="Picture of the title screen for Metroid">
+            </div>
+        </div><!--end of wrapper div-->
+
+        <script src="js30.js"></script>
+    </body>
+</html>

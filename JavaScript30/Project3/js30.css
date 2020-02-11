@@ -1,0 +1,105 @@
+/* Kevin Atherton, WEB 124 JavaScript II, September 17, 2019 */
+
+/* Code modified and adapted from https://courses.wesbos.com/account/access/5d6ec90685f96c03c1e56510/view/194130581 */
+
+@font-face {
+    font-family: "DS-Digital";
+    src: url("digital-7.ttf");
+} /* I wanted to have the times look like an old digital clock and researched how to accomplish this with a custom font and how to use it, resulting in using @font-face */
+
+*
+            {
+                box-sizing: border-box;
+            } /* configures universal selector for box sizing of elements */
+
+header, main, nav, footer, figure, figcaption, aside, section, article
+            {
+                display: block;
+            } /* configures html5 elements to work in older browsers */
+
+html
+            {
+                background: #018DED;
+                background-image: url(http://unsplash.it/1500/1000?image=881); /* Blur didn't work like it did on Wes's project so I removed it */
+                background-size: cover;
+                font-family: 'helvetica neue';
+                text-align: center;
+                font-size: 10px;
+            }
+
+body
+            {
+                font-size: 2rem;
+                display: flex;
+                flex: 1;
+                min-height: 100vh;
+                align-items: center;
+            }
+
+p
+            {
+                font-size: 30pt;
+                margin: 5px;
+            }
+
+.clock
+            {
+                width: 30rem;
+                height: 30rem;
+                border: 20px solid white;
+                border-radius: 50%;
+                margin: 50px auto;
+                position: relative;
+                padding: 2rem;
+                box-shadow:
+                    0 0 0px 4px rgba(0,0,0,0.1),
+                    inset 0 0 0 3px #EFEFEF,
+                    inset 0 0 10px black,
+                    0 0 10px rgba(0,0,0,0.2);
+            }
+
+.clock-face
+            {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform: translateY(50px);
+            }
+
+.hand
+            {
+                width: 50%;
+                height: 6px;
+                background: black;
+                position: absolute;
+                top: 50px;
+                transform-origin: 100%;
+                transform: rotate(90deg);
+                transition: all 0.05s;
+                transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+            }
+
+.hour-hand
+            {
+                width: 70px;
+                left: 40px;
+            } /* extra styling to shorten the hour hand and model a real world clock's hour hand better */
+
+.second-hand
+        {
+            background: #cf2020;
+            height: 2px;
+        } /* extra styling to model a real world clock's second hand */
+
+.time
+        {
+            font-family: "DS-Digital";
+        } /* new use of @font-face to style the times like an old LCD clock */
+
+#wrapper
+            {
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 500px;
+                width: 80%;
+            }

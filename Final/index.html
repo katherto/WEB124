@@ -1,0 +1,93 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, October 22, 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="final.css" type="text/css">
+        <title>Final Project</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>WEB 124 Course Objectives</h1>
+            <ol>
+                <li>Manipulate the DOM.
+                    <p>To demonstrate manipulating the DOM with JavaScript I've written a function that will take input from the user using a color picker.  
+                       Once the color is selected and the Change Color button pressed, this paragraph explaining the function will have its text color changed!</p>
+                    <input type="color" id="colorPicker">
+                    <input type="button" id="colorChange" value="Change Color">
+                </li>
+                <li>Add and remove HyperText Markup Language (HTML) document nodes.
+                    <p>To demonstrate adding and removing HTML document nodes, I've created a function that will take the user's input and add it to the following unordered list.  
+                       After entering some text into the field, clicking Add Item will create a new document node and add that node to the list.  
+                       Clicking the remove button will remove the last item in the unordered list.</p>
+                    <input type="text" id="listItem">
+                    <input type="button" id="addItem" value="Add Item">
+                    <input type="button" id="removeItem" value="Remove Last Item">
+                    <ul id="userItems">
+                        <li>Use the text box and buttons to add or remove items from this list!</li>
+                    </ul>
+                </li>
+                <li>Control the BOM.
+                    <p>To demonstrate controlling the BOM, type in something to add onto the end of this webpage's URL.  
+                       Once you click the button your text will be pushed to the History object for the window!  
+                       Each time a new state is pushed a count of how many history items for the window is updated as well.  
+                       Going back will eventually land you back on this page's index URL (even though the page isn't reloading each time).</p>
+                    <input type="text" id="userItem">
+                    <input type="button" id="pushHistory" value="Push History Item!"><br />
+                    <span>Number of Window History Items: </span>
+                    <span id="historyLength"></span>
+                </li>
+                <li>Enhance and validate form data.
+                    <p>Form validation is demonstrated by the following greeter.  
+                       Before the browser greets the user, the function is programmed to ensure text is inside the input field before greeting the user.</p>
+                    <form action="#" method="post" id="greetUser">
+                        <label for="userName">Enter your name: </label>
+                        <input type="text" id="userName" name="username">
+                        <input type="submit" value="Get Greeted!">
+                        <span id="error"></span>
+                    </form>
+                </li>
+                <li>Create scripts using built-in JavaScript classes.
+                    <p>When this webpage is loaded, two random numbers are chosen using the Math class.  
+                       A simple math problem is presented with those random numbers for the user to solve!  
+                       When you input your answer to the math problem, the programmed function will first find the solution then check against your answer to see if you're correct!</p>
+                    <span id="random1"></span>
+                    <span> + </span>
+                    <span id="random2"></span>
+                    <span> = </span>
+                    <input type="text" id="mathAnswer">
+                    <input type="button" id="mathSolve" value="Check Answer!">
+                    <span id="mathResult"></span>
+                </li>
+                <li>Manipulate data in strings and arrays.
+                    <p>To demonstrate array manipulation, the following asks a user to enter in a color then submit that entry.  
+                       Each time a new color is submitted the function stores the input as an element at the end of the array that's being built and can be sorted in alphabetical order by pressing the sort button.</p>
+                    <input type="text" id="userColor">
+                    <input type="button" id="submitColor" value="Submit Color!">
+                    <input type="button" id="sortColor" value="Sort Colors!"><br />
+                    <span>Current Array: </span>
+                    <span id="colorArray"></span>
+                </li>
+                <li>Validate JavaScript and apply advanced debugging techniques.
+                    <p>Debugging can sometimes be a long process depending on what kind of error is experienced.  
+                       To demonstrate one such debugging strategy, the browser's developer tools offers a handy console window for us to use which we can log information using JavaScript.  
+                       In this example, clicking the button will trigger a function that changes the fourth list item's text color and logs to the console window the various DOM traversal steps used to select the desired element to be changed.</p>
+                    <input type="button" id="changeColor" value="Change Color (then check the console log)!">
+                </li>
+                <li>Apply coding techniques to address JavaScript security issues.
+                    <p>To demonstrate understanding and defense against Cross Server Script (XSS) attacks I've created the following.  
+                       The example below will call a function to wrap bold html tags around the displayed phrase and show what happens when the innerHTML and textContent properties are used in JavaScript to make changes to the HTML document.</p>
+                    <input type="text" id="phrase" value="Hello World!" disabled>
+                    <input type="button" id="demonstrate" value="Make it BOLD!"><br />
+                    <span>innerHTML Result: </span>
+                    <span id="innerHTMLDemonstration"></span><br />
+                    <span>textContent Result:</span>
+                    <span id="textContentDemonstration"></span>
+                </li>
+            </ol>
+        </div><!--end of wrapper div-->
+        <script src="final.js"></script>
+    </body>
+</html>

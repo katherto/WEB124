@@ -1,0 +1,301 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, September 10, 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ch3project.css" type="text/css">
+        <title>Chapter 3 Project</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p id="q1">Question 1: Is there a resource that contains best practices in programming either JavaScript or with any language?</p>
+            <p id="q2">Question 2: What are some situations where you would use an IIFE?</p>
+            <p id="q3">Question 3: What is the best way to see every method that belongs to the window object, document object, etc.?</p>
+            <h2>JavaScript variable names: Create and complete the following Table</h2>
+            <table><!--table containing information about JavaScript variable names-->
+                <thead>
+                    <tr>
+                        <th>Variable Name</th>
+                        <th>Valid? Yes or No</th>
+                        <th>If NOT valid, why NOT? If valid, from a best practices standpoint, is this a good variable name or not? If NOT, why NOT?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="variable">JCCC</td>
+                        <td>Yes</td>
+                        <td>The best practice for a fully capitalized variable name is to use it as a constant. So, if this variable is a const then it satisfies best practices.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">$JCCC</td>
+                        <td>Yes</td>
+                        <td>This is a good variable name as long as it adheres to the best practice for starting a variable name with $ if it's a jQuery object.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">_JCCC</td>
+                        <td>Yes</td>
+                        <td>This is a good variable name as long as it adheres to the best practice for referencing a private method or property.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">%JCCC</td>
+                        <td>No</td>
+                        <td>Variable names must begin with a letter or $ or _.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">1jccc</td>
+                        <td>No</td>
+                        <td>Variable names must begin with a letter or $ or _</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">jccc</td>
+                        <td>Yes</td>
+                        <td>Assuming this variable isn't a constant, then it is valid and satisfies best practices.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">jccc-ks</td>
+                        <td>No</td>
+                        <td>Variable names can't contain a hyphen.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">jccc.ks</td>
+                        <td>No</td>
+                        <td>Variable names can't contain a period.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">var</td>
+                        <td>No</td>
+                        <td>var is a reserved JavaScript keyword to declare a variable and thus cannot be a variable name.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">function</td>
+                        <td>No</td>
+                        <td>function is a reserved JavaScript keyword and thus cannot be a variable name.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">streetaddress</td>
+                        <td>Yes</td>
+                        <td>From a best practices standpoint it is best to use camel case as there are two words forming this variable's name.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">streetAddress</td>
+                        <td>Yes</td>
+                        <td>This is the correct way to declare a variable name with two words using camel case, adhering to best practices.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">StreetAddress</td>
+                        <td>Yes</td>
+                        <td>From a best practices standpoint it is best to capitalize each word of the variable name if you're creating a constructor.</td>
+                    </tr>
+                    <tr>
+                        <td class="variable">street-Address</td>
+                        <td>No</td>
+                        <td>Variable names can't contain a hyphen.</td>
+                </tbody>
+            </table>
+            <section><!--Section that starts our JavaScript coding project-->
+                <h2>JavaScript Arrays!</h2>
+                <p id="p1">Web Development and Digital Media</p>
+                <p id="p2">Web Development and Digital Media</p>
+                <p id="p3">Web Development and Digital Media</p>
+                <p id="p4">Web Development and Digital Media</p>
+                <p id="p5">Web Development and Digital Media</p>
+                <p id="p6">Web Development and Digital Media</p>
+                <p id="p7">Web Development and Digital Media</p>
+                <p id="p8">Web Development and Digital Media</p>
+                <p id="p9">Web Development and Digital Media</p>
+                <script src="ch3project.js"></script>
+            </section>
+            <section><!--Array Review Questions section-->
+                <h2>Array Review Questions</h2>
+                <p>1. What is the difference between using "quotation marks" versus 'apostrophes' in JavaScript?</p>
+                <p id="p10">Functionally there is no difference between using " or ' in JavaScript.  However, if you want quotation marks as part of the string you must use a pair of apostrophes wrapping around the quotation marks.</p>
+                <p>2. What is the key difference between the innerHTML property and the textContent property?</p>
+                <p id="p11">With innerHTML you can include any HTML code as part of the assignment and the browser will render its style correctly.  However, textContent only modifies the text.  If you include HTML code using the textContent property you'll see the code reflected in the browser's rendering.</p>
+                <p>3. For a reference to a month, why might it make more sense to reference an array value vs. a variable?</p>
+                <p id="p12">For an array of months, it's easier to assign and reference each month numerically as we might think of them in real life.  Such as the ninth month of the year is September, and accounting for array indexing in our project that is months[8].  With a variable we can only store one value, which may work well if we we're referencing or assigning a variable of the current month or something.</p>
+            </section>
+            <h2>Function terminology: Create and Complete the Following Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center"><span class="term">function</span></td>
+                        <td>A series of statements grouped together to perform a specific task.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">statement</span></td>
+                        <td>An individual instruction or step.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">parameter</span></td>
+                        <td>Pieces of information passed to a function so it can accomplish its task.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">argument</span></td>
+                        <td>Values or variables provided when a function is called that has parameters.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">return value</span></td>
+                        <td>The response or answer that a function is written to provide.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">function declaration</span></td>
+                        <td>Creates a named function that you can call later in your code.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">function expression</span></td>
+                        <td>A function put normally where an interpreter would expect an expression.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">anonymous function</span></td>
+                        <td>A function with no name.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">immediately invoked function expression</span></td>
+                        <td>A function with no name that is only executed once when the interpreter encounters the function.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <section><!--Function Review Questions section-->
+                <h2>Function Review Questions</h2>
+                <p>1. How do you call a function named showTotal if it doesn't have any parameters?</p>
+                <p id="f1"><code>showTotal();</code></p>
+                <p>2. How do you call a function named showTotal if it has two parameters named tax and total and you wish to pass the number 2 as an argument to the tax parameter and 10 as an argument to the total parameter?</p>
+                <p id="f2">Assuming showTotal is declared <code>function showTotal(tax, total) { }</code> the function call is <code>showTotal(2, 10);</code></p>
+                <p>3. How do you call a function named showTotal if it has two parameters named tax and total and you wish to pass the variable stateTax as an argument to the tax parameter and totalBeforeTax as an argument to the total parameter?</p>
+                <p id="f3">Assuming showTotal is declared <code>function showTotal(tax, total) { }</code> the function call is <code>showTotal(stateTax, totalBeforeTax);</code></p>
+            </section>
+            <section><!--Variable Scope Questions section-->
+                <h2>Variable Scope Questions</h2>
+                <p>1. What JavaScript statement forces you to explicitly declare all variables, and where is it placed?</p>
+                <p id="s1"><code>"use_strict";</code> and it is placed at the very top of the JavaScript document</p>
+                <p>2. What are two ways to create a global (window-level) variable?</p>
+                <p id="s2">Create a variable outside of a function, or creating a variable with the keyword var.</p>
+                <p>3. What JavaScript keyword is used to create a block-level variable</p>
+                <p id="s3">let</p>
+            </section>
+            <h2>Object terminology: Create and Complete the Following Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center"><span class="term">object</span></td>
+                        <td>Objects group together a set of variables and functions to create a model of something you would find in the real world.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">property</span></td>
+                        <td>A variable that is part of an object.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">method</span></td>
+                        <td>A function that is part of an object.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">key</span></td>
+                        <td>The name of an object's property or method.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">literal notation</span></td>
+                        <td>The easiest and most popular way to create an object done by declaring a variable and assigning it to open and closed curly braces with keys and values inside the curly braces.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">dot notation</span></td>
+                        <td>The way you access an object's properties and methods used by referencing the name of an object followed by a period.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">constructor notation</span></td>
+                        <td>They way you create an object using the new keyword and the Object() constructor.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">this</span></td>
+                        <td>A keyword that refers to one object and is usually the object in which the function operates.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><span class="term">undefined</span></td>
+                        <td>A variable that has been defined but no value has been assigned to it yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <section><!--User-Created Object Questions section-->
+                <h2>User-Created Object Questions</h2>
+                <p>1. What is the benefit of using literal notation over constructor notation to create an object?</p>
+                <p id="j1">If you need more control over an object that will be created, you can use literal notation to create the object and its properties and methods.</p>
+                <p>2. What is the benefit of using constructor notation over literal notation to create an object</p>
+                <p id="j2">You can create a template of an object using a function which may or may not create objects based on your needs. It can also be used to easily create multiple instanced objects based on that template.</p>
+                <p>3. If a function is created in the global scope, what does <code>this</code> refer to?</p>
+                <p id="j3">The window object.</p>
+                <p>4. If a function is created within an object, the function becomes a method of that object.  In that case, what does <code>this</code> refer to?</p>
+                <p id="j4">The containing object for that method.</p>
+            </section>
+            <h2>Built-in Objects: Create and Complete the Following Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <td style="text-align: center"><span class="term">Browser</span></td>
+                        <td style="text-align: center"><span class="term">Document</span></td>
+                        <td style="text-align: center"><span class="term">Global String</span></td>
+                        <td style="text-align: center"><span class="term">Global Number</span></td>
+                        <td style="text-align: center"><span class="term">Global Math</span></td>
+                        <td style="text-align: center"><span class="term">Global Date</span></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Example of a common method for that object</td>
+                        <td>window.alert()</td>
+                        <td>createElement()</td>
+                        <td>toUpperCase()</td>
+                        <td>isNaN()</td>
+                        <td>round()</td>
+                        <td>getDay()</td>
+                    </tr>
+                    <tr>
+                        <td>Explanation of example</td>
+                        <td>Creates dialog box with a message. Closed by user clicking OK button.</td>
+                        <td>Creates a new element on the webpage.</td>
+                        <td>Changes string to uppercase characters.</td>
+                        <td>Checks if the value is not a number.</td>
+                        <td>Rounds number to the nearest integer.</td>
+                        <td>Returns the day of the week.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Data Types: Create and Complete the Following Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <td style="text-align: center"><span class="term">String</span></td>
+                        <td style="text-align: center"><span class="term">Number</span></td>
+                        <td style="text-align: center"><span class="term">Boolean</span></td>
+                        <td style="text-align: center"><span class="term">Undefined</span></td>
+                        <td style="text-align: center"><span class="term">null</span></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Provide an example of how to declare a variable with each of these data types.</td>
+                        <td>let stringExample = 'Kevin';</td>
+                        <td>let numberExample = 50;</td>
+                        <td>let booleanExample = true;</td>
+                        <td>let undefinedExample;</td>
+                        <td>let nullExample = null;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!--end of wrapper div-->
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, September 3, 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ch2project.css" type="text/css">
+        <title>Chapter 2 Project</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p id="q1">Question 1: Too many comments would hurt our code's readability perhaps so should we assume any programming knowledge when we comment?</p>
+            <p id="q2">Question 2: What are some other common escape characters we may use?</p>
+            <p id="q3">Question 3: At what points can we reference a variable after it has been declared? Should these declarations always be at the top?</p>
+            <h2>JavaScript syntax: Create and complete the following Table</h2>
+            <table><!--table containing information about JavaScript syntax-->
+                <thead>
+                    <tr>
+                        <th>JavaScript syntax characters</th>
+                        <th>Description</th>
+                        <th>Provide an example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>When do you use the semicolon ;</td>
+                        <td>Used to terminate a full statement</td>
+                        <td><code>console.log("Hi World!");</code></td>
+                    </tr>
+                    <tr>
+                        <td>When do you use { curly braces }</td>
+                        <td>Used to surround code blocks<br><br>also used to create a custom object (but we are not that far in class yet so I wanted to provide an example).</td>
+                        <td><code>if (user === "Ethan") {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hi Ethan!" );<br>
+                            }<br>
+                            const ethan = {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;lname: 'Radford',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;title: 'Professor',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;school: 'JCCC'<br>
+                            }
+                        </code></td>
+                    </tr>
+                    <tr>
+                        <td>How do you write a one-line comment</td>
+                        <td>Used for including documentation within your code and can contain anything</td>
+                        <td><code>// This is a single line code comment, which will not be seen anywhere unless looking directly at the source code</code></td>
+                    </tr>
+                    <tr>
+                        <td>How do you write a multi-line comment</td>
+                        <td>Used to create a block comment spanning multiple lines</td>
+                        <td><code>/* First comment line<br>
+                                  &nbsp;* Second comment line<br>
+                                  &nbsp;* Third comment line */
+                        </code></td>
+                    </tr>
+                    <tr>
+                        <td>How do you declare a variable</td>
+                        <td>Used to create a space in memory that can contain data such as numbers and strings</td>
+                        <td><code>let someVariable = 21;</code></td>
+                    </tr>
+                    <tr>
+                        <td>How do you assign a textual value to a variable</td>
+                        <td>Used to store a string value to a declared variable</td>
+                        <td><code>let textVariable = 'Hello there';</code></td>
+                    </tr>
+                    <tr>
+                        <td>When do you use 'apostrophes' vs. "quotation" marks</td>
+                        <td>Technically you can use either to do something with a string value, but if that string is to include quotation marks then use apostrophe on the outermost part of the string</td>
+                        <td><code>let quoteString = 'Then he said "How was your day?"';</code></td>
+                    </tr>
+                    <tr>
+                        <td>When do you use the backwards slash \</td>
+                        <td>Used to execute specific escape characters in a string, such as the new line character</td>
+                        <td><code>alert("This is the first line in a popup window\nThis is the second line of the popup window");</code></td>
+                    </tr>
+                    <tr>
+                        <td>What is the most straight forward way of creating an array</td>
+                        <td>Used to create a memory location that can store many data types</td>
+                        <td><code>let sampleArray = new Array();</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <section><!--Section that starts our JavaScript coding being displayed-->
+                <h2>Let's Write Some JavaScript!</h2>
+                <p id="p1">Johnson County Community College</p>
+                <p id="p2">Johnson County Community College</p>
+                <p id="p3">Johnson County Community College</p>
+                <p id="p4">Johnson County Community College</p>
+                <p id="p5">Johnson County Community College</p>
+                <p id="p6">Johnson County Community College</p>
+                <script src="ch2project.js"></script>
+            </section>
+            <section><!--Review Questions section-->
+                <h2>Review Questions</h2>
+                <p>1. When does the JavaScript in this project run?</p>
+                <p id="p7">The JavaScript runs once the browser renders the page and encounters the script tag.  In this case the whole page has displayed and did show "Johnson County Community College" in the six paragraphs before encountering the script tag, loading, and executing the code which then changed each paragraph as we instructed.</p>
+                <p>2. Why can you + text with a number but not * text with a number in JavaScript?</p>
+                <p id="p8">In JavaScript you can use + to either perform math or concatenate text.  However, you can't perform math on text with * as it's expecting valid number inputs so it can give a number output, which, is why the result was NaN for paragraph five.</p>
+                <p>3. What is the difference between the textContent and innerHTML properties and why was it more appropriate to use textContent for this exercise?</p>
+                <p id="p9">innerHTML allows us to type HTML code as part of the string when we modify the innerHTML property of an element in JavaScript.  The HTML code will be styled and reflected as it should.  With textContent, any HTML code is actually shown as part of the text when we modify the textContent property in JS.  No styling will be reflected when changing the content of an element with this property.  Best practice usually is to only edit textContent with Javascript for an existing element, and add a new element with Javascript instead of using innerHTML.  Since we already created the paragraph elements with text beforehand, we worked with the textContent property in JS.</p>
+                <p>4. What is "automatic semicolon insertion" in JavaScript?</p>
+                <p id="p10">If a statement is not explicitly terminated with a semicolon, in certain situations a semicolon will be automatically inserted by JavaScript engine.  This has the potential to alter the behavior of our JavaScript code.</p>
+                <p>5. When is it OK to break a statement onto two lines in Javascript without using special characters?</p>
+                <p id="p11">Typically this happens if there's a long line of logical operators in an expression.  The extra returns assist our code in being more readable while the return character itself in the code influences how ASI works.</p>
+                <p>6. How are tabs and spaces used and treated in Javascript?</p>
+                <p id="p12">Spaces and tabs are generally ignored in JavaScript.  You can include spaces and tabs at any point on a line of code and it would be seen and executed the same.  These are another means of helping our code be more readable.</p>
+            </section>
+        </div><!--end of wrapper div-->
+    </body>
+</html>

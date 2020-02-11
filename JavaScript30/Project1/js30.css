@@ -1,0 +1,65 @@
+/* Kevin Atherton, WEB 124 JavaScript II, September 10, 2019 */
+
+/* Code modified and adapted from https://courses.wesbos.com/account/access/5d6ec90685f96c03c1e56510/view/194130480 */
+
+:root
+            { /* CSS variables that will handle image transformations */
+                --color1: #ffc600; /* color1 and color2 variables handle the new gradient feature the user can control */
+                --color2: #ffc600;
+                --blur: 10px;
+                --spacing: 10px;
+                --radius: 0em; /* new radius variable to handle border radius amount */
+            }
+
+*
+            {
+                box-sizing: border-box;
+            } /* configures universal selector for box sizing of elements */
+
+header, main, nav, footer, figure, figcaption, aside, section, article
+            {
+                display: block;
+            } /* configures html5 elements to work in older browsers */
+
+body
+            {
+                text-align: center;
+            }
+
+body
+            {
+                background: #193549;
+                color: white;
+                font-family: 'helvetica neue', sans-serif;
+                font-weight: 100;
+                font-size: 50px;
+            }
+
+img
+            {
+                background-image: linear-gradient(to bottom, var(--color1), var(--color2)); /* This a new way to interact with the background color of the image, giving it a gradient the user can control */
+                border-radius: var(--radius); /* Border Radius is a new way to update the image that I added */
+                filter: blur(var(--blur));
+                height: auto;
+                max-width: 600px;
+                padding: var(--spacing);
+                width: 100%;
+            }
+
+.controls
+            {
+                margin-bottom: 50px;
+            }
+
+.hl
+            {
+                color: var(--color1);
+            }
+
+#wrapper
+            {
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 500px;
+                width: 80%;
+            }

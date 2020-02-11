@@ -1,0 +1,32 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, September 17, 2019 -->
+
+<!--Code modified and adapted from https://courses.wesbos.com/account/access/5d6ec90685f96c03c1e56510/view/194130581-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="js30.css" type="text/css">
+        <title>CSS + JS Clock</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!--Local Time is a new enhancement to show digitally in real time the current time-->
+            <h1>Local Time</h1>
+            <p><span id="local-time" class="time">00:00:00</span></p>
+            <div class="clock">
+                <div class="clock-face">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand min-hand"></div>
+                    <div class="hand second-hand"></div>
+                </div>
+            </div>
+            <!--World Times is a new enhancement which updates in real time other timezones-->
+            <h1>World Times</h1>
+            <p id="london-time" class="time">00:00:00</p>
+            <p id="australia-time" class="time">00:00:00</p>
+        </div><!--end of wrapper div-->
+        <script src="js30.js"></script>
+    </body>
+</html>

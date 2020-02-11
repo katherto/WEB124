@@ -1,0 +1,47 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, September 10, 2019 -->
+
+<!--Code modified and adapted from https://courses.wesbos.com/account/access/5d6ec90685f96c03c1e56510/view/194130480
+    
+    I chose this JavaScript 30 project because my initial thought was it'd be interesting to learn how to directly control the CSS via controls the user can interact with
+    My initial thought was how this concept ran contrary to my current understanding of JavaScript interacting with the CSS document, but what I learned is
+    not much is really different.  JavaScript still cannot interact directly with the CSS document from what I've seen and understand, but CSS variables gives us a way to 
+    sort of subvert this weakness of JavaScript-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="js30.css" type="text/css">
+        <title>Update CSS Variables with JS</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h2>Update CSS Variables with <span class="hl">JS</span></h2>
+            <div class="controls">
+                <label for="spacing">Spacing:</label>
+                <!--New IDs for each control to accompany JS modifications-->
+                <input type="range" name="spacing" id="spacing" min="10" max="200" value="10" data-sizing="px">
+
+                <label for="blur">Blur:</label>
+                <input type="range" name="blur" id="blur" min="0" max="25" value="10" data-sizing="px">
+
+                <!--Border Radius is a new control I've given the user to manipulate the image-->
+                <label for="radius">Border Radius:</label>
+                <input type="range" name="radius" id="radius" min="0" max="200" value="0" data-sizing="px">
+                
+                <br>
+                
+                <!--Color 1 and Color 2 controls are new ways for the user to manipulate the added gradient in the background of the image-->
+                <label for="color1">Color 1:</label>
+                <input type="color" name="color1" id="color1" value="#ffc600">
+                
+                <label for="color2">Color 2:</label>
+                <input type="color" name="color2" id="color2" value="#ffc600">
+            </div>
+
+            <img src="Loki.JPG" alt="A picture of my cat Loki"><!--The image from the video wasn't working, so I substituted it with my cat, Loki!-->
+        </div><!--end of wrapper div-->
+        <script src="js30.js"></script>
+    </body>
+</html>

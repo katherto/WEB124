@@ -1,0 +1,76 @@
+/* Kevin Atherton, WEB 124 JavaScript II, October 22, 2019 */
+
+*
+                {
+                        box-sizing: border-box;
+                } /* configures universal selector for box sizing of elements */
+
+header, main, nav, footer, figure, figcaption, aside, section, article
+                {
+                        display: block;
+                } /* configures html5 elements to work in older browsers */
+
+body
+                {
+                        background-color: #7cc4ff;
+                        font-family: Arial, Helvetica, sans-serif;
+                }
+
+h1
+                {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        margin-top: 0;
+                        text-align: center;
+                }
+
+input
+                {
+                        margin-bottom: 1em;
+                }
+
+li
+                {
+                        margin-bottom: 1em;
+                }
+
+#wrapper
+                {
+                        background-color: #ffffff;
+                        border-radius: 1em;
+                        box-shadow: 5px 5px 7px black;
+                        margin-left: auto;
+                        margin-right: auto;
+                        min-width: 500px;
+                        padding: 1em;
+                        width: 80%;
+                }
+
+/*################################################################################################################*/
+/*################################## Beginning of Tablet Media Query #############################################*/
+/*################################################################################################################*/
+
+@media only screen and (max-width: 64em)
+        {
+                #wrapper
+                                {
+                                        width: 100%;
+                                }
+        }
+
+/*########################################################################*/
+/*############## Beginning of Mobile Media Query #########################*/
+/*########################################################################*/
+
+@media only screen and (max-width: 37.5em)
+        {
+                body
+                                {
+                                        margin: 0;
+                                }
+
+                #wrapper
+                                {
+                                        border-radius: 0;
+                                        min-width: 0;
+                                }
+        }

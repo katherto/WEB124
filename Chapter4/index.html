@@ -1,0 +1,192 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, September 24, 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ch4project.css" type="text/css">
+        <title>Chapter 4 Project</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p id="q1">Question 1: When is it best to compare strict values or not strict values?</p>
+            <p id="q2">Question 2: Does code perform better when using things like type coercion to make code more compact?</p>
+            <p id="q3">Question 3: Can you go over Do While loops? We didn't cover this in class.</p>
+            <h2>Comparison Operators: Create and complete the following Table</h2>
+            <table><!--table containing information about JavaScript comparison operators-->
+                <thead>
+                    <tr>
+                        <th>Operators</th>
+                        <th>Meaning</th>
+                        <th>Example and Return Value</th>
+                        <th>Explanation of Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center"><code>==</code></td>
+                        <td>Equals</td>
+                        <td><code>a == b</code> (returns false)</td>
+                        <td>The two operands, a and b, are not equal so this expression will return a false value.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>===</code></td>
+                        <td>Strict Equals</td>
+                        <td><code>'10' === 10</code> (returns false)</td>
+                        <td>Strict equals compares data types and prevents JavaScript from performing type coercion on the string 10. Since the string remains a string and is compared to a number value this expression returns a false value.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>!=</code></td>
+                        <td>Not Equals</td>
+                        <td><code>20 != 10</code> (returns true)</td>
+                        <td>Not equals returns the opposite of what the equals operator would. Since 20 does not equal 10, and equals would normally return false, not equals will return a true value.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>!==</code></td>
+                        <td>Strict Not Equals</td>
+                        <td><code>'50' !== '50'</code> (returns false)</td>
+                        <td>Strict not equals returns the opposite of what the strict equals operator would. Since the two strings '50' equal each other and match data types, strict equals would return true, but strict not equals in this case will return a false value.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>&gt;</code></td>
+                        <td>Greater Than</td>
+                        <td><code>43 &gt; 32</code> (returns true)</td>
+                        <td>The operands 43 and 32 are compared and since in this case 43 is greater than 32 a true value will be returned for this expression.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>&gt;=</code></td>
+                        <td>Greater Than or Equal to</td>
+                        <td><code>43 &gt;= 43</code> (returns true)</td>
+                        <td>In this case even though the two operands are compared and neither is greater than the other, since they are equal and the operator includes that case a true value will be returned.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>&lt;</code></td>
+                        <td>Less Than</td>
+                        <td><code>43 &lt; 32</code> (returns false)</td>
+                        <td>The operands 43 and 32 are compared and since in this case 43 is greater than 32 a false value will be returned for this expression.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>&lt;=</code></td>
+                        <td>Less Than or Equal to</td>
+                        <td><code>32 &lt;= 32</code> (returns true)</td>
+                        <td>In this case even though the two operands are compared and neither is less than the other, since they are equal and the operator includes that case a true value will be returned.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>&amp;&amp;</code></td>
+                        <td>Logical And</td>
+                        <td><code>(43 &gt; 32) &amp;&amp; (32 &lt; 43)</code> (returns true)</td>
+                        <td>The left side of this expression is evaluated first, and since 43 is greater than 32 it evaluates true.  However, with Logical And both sides of the expression must be true for it to return true.  Thus, the right side is evaluated and since 32 is less than 43 and evaluates true, the whole expression returns a true value.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>||</code></td>
+                        <td>Logical Or</td>
+                        <td><code>(43 &lt; 32) || (43 &gt; 32)</code> (returns true)</td>
+                        <td>The left side of this expression is evaluated first, and since 43 is greater than 32 it evaluates false.  However, with Logical Or only one side has to evaluate as true in order to return a true value.  Thus, the right side is evaluated and since 43 is greater than 32, the whole expression returns a true value.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><code>!</code></td>
+                        <td>Logical Not</td>
+                        <td><code>!true</code> (returns false)</td>
+                        <td>Not simply returns the opposite of the logical expression.  In this case the opposite of true is false, and the expression will return a false value.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Syntax Review: Create and Complete the Following Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Characters</th>
+                        <th>(parentheses)</th>
+                        <th>{curly braces}</th>
+                        <th>[square brackets]</th>
+                        <th>+ symbol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>usage 1</td>
+                        <td>(parentheses can be used to change the math order of operations in an expression)</td>
+                        <td>{curly braces have a use to determine the beginning and end of a defined function}</td>
+                        <td>[square brackets have only one usage, to identify an array index]</td>
+                        <td>The + symbol can be used to perform math expressions in JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>usage 1 example</td>
+                        <td><code>var a = (3 + 8) * (4 - 2);</code> <br />result is a = 22 <br />
+                            <code>var b = (3 + 8) * 4 - 2;</code> <br />result is b = 42</td>
+                        <td><code>function test() { return true }</code></td>
+                        <td><code>someArrayName[0]</code></td>
+                        <td><code>5 + 10</code></td>
+                    </tr>
+                    <tr>
+                        <td>usage 2</td>
+                        <td>(parentheses can also be used to pass arguments to a function or method when calling it)</td>
+                        <td>{curly braces are also used to define code blocks and can be used within functions}</td>
+                        <td>[square brackets have only one usage, to identify an array index]</td>
+                        <td>The + symbol can also be used to concatenate strings in JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>usage 2 example</td>
+                        <td><code>var a = calculateSum(5, 10);</code></td>
+                        <td><code>if (a == true) { alert("Congrats"); }</code></td>
+                        <td><code>someArrayName[0]</code></td>
+                        <td><code>'Kevin' + 10</code><br>
+                                  This will display Kevin10
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <section><!--Writing JavaScript section-->
+                <h2>Write some JavaScript!</h2>
+                <p>Testing truthy and falsy</p>
+                <label for="value1">Number Value 1: </label>
+                <input type="number" id="value1" name="numVal1">
+                <label for="value2">String Value 2: </label>
+                <input type="number" id="value2" name="stringVal2"><br /><br />
+                <input type="button" id="testNotStrictButton" value="Not Strict"><br />
+                <input type="button" id="testStrictButton" value="Strict"><br /><br />
+                <p id="result"></p>
+                <script>
+                    var $ = function(id) { return document.getElementById(id); };
+
+                    function testNotStrict() {
+                        let num1 = parseInt($("value1").value);
+                        let num2 = $("value2").value;
+                        console.log(num1);
+                        console.log(num2);
+
+                        // performs the evaluation of the two user input values and displays the result
+                        if ( num1 == num2) {
+                            $("result").textContent = "Truthy";
+                        } else {
+                            $("result").textContent = "Falsy";
+                        }
+                    }
+
+                    function testStrict() {
+                        let num1 = parseInt($("value1").value);
+                        let num2 = $("value2").value;
+                        console.log(num1);
+                        console.log(num2);
+
+                        // performs strict evaluation of the two user input values and displays the result
+                        switch (num1 === num2) {
+                            case true:
+                                $("result").textContent = "Truthy";
+                                break;
+                            case false:
+                                $("result").textContent = "Falsy";
+                                break;
+                            default:
+                                $("result").textContent = "Invalid";
+                        }
+                    }
+
+                    $("testNotStrictButton").onclick = testNotStrict;
+                    $("testStrictButton").onclick = testStrict;
+                </script>
+            </section>
+        </div><!--end of wrapper div-->
+    </body>
+</html>

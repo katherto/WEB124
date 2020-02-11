@@ -1,0 +1,205 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, August 27, 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ch1project.css" type="text/css">
+        <title>Chapter 1 Project</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p id="q1">Question 1: How best could you optimize the first two lines of the JavaScript down to one line of code, if possible?</p>
+            <p id="q2">Question 2: In what circumstance would the else logical test execute?</p>
+            <p id="q3">Question 3: It's not in the book code, but generally meta charset UTF-8 is included in the head. What does this do?</p>
+            <h2>HTML - CSS - JavaScript Essential Concepts</h2>
+            <table><!--table containing information about essential concepts-->
+                <thead>
+                    <tr>
+                        <th>Language ==></th>
+                        <th><span class="htmlconcern">HTML</span></th>
+                        <th><span class="cssconcern">CSS</span></th>
+                        <th><span class="jsconcern">JavaScript</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Acronym</th>
+                        <td>HyperText Markup Language</td>
+                        <td>Cascading Style Sheet</td>
+                        <td>JavaScript is not an acronym</td>
+                    </tr>
+                    <tr>
+                        <th>Definition</th>
+                        <td>A text based approach in giving web pages structure for our content using semantics</td>
+                        <td>CSS enhances an HTML page with styling rules that describes how the content should be presented</td>
+                        <td>JavaScript further improves a webpage by enabling behaviors and adding user interactivity</td>
+                    </tr>
+                    <tr>
+                        <th>Purpose</th>
+                        <td>HTML is for structuring the webpage. A browser will read from top to bottom and render based upon the various tags and content it finds in the code.</td>
+                        <td>CSS is for taking the content described by the HTML and applying styling rules. This is where we can determine various colors, fonts, sizes, etc. for the content in a webpage.</td>
+                        <td>JavaScript can not only enable user interactivity but also do many other things such as input validation based on the instructions that are programmed for the webpage to follow.</td>
+                    </tr>
+                    <tr>
+                        <th>Comment Syntax</th>
+                        <td>&lt;!-- --&gt;</td>
+                        <td>/* */</td>
+                        <td>// for single line comment or /* */ for block comment</td>
+                    </tr>
+                    <tr>
+                        <th>Code editor you will be using in this class</th>
+                        <td>VS Code</td>
+                        <td>VS Code</td>
+                        <td>VS Code</td>
+                    </tr>
+                    <tr>
+                        <th>Validator or primary debugging tool you will be using in this class</th>
+                        <td>W3C Markup Validation Service</td>
+                        <td>W3C CSS Validation Service</td>
+                        <td>Chrome/Firefox Developer Tools and Console</td>
+                    </tr>
+                    <tr>
+                        <th>Discuss case sensitivity in this language</th>
+                        <td>HTML 5 is not case sensitive but current best practice is to write all HTML in lowercase characters with the exception of the &lt;!DOCTYPE html&gt; statement which is equally acceptable in either upper or lowercase &lt;!doctype html&gt;</td>
+                        <td>CSS3 is not case sensitive but current best practice is to write all CSS in lowercase characters except for proper font names such as Arial, Georgia, or Times New Roman.  Another best practice is to match case sensitivity in CSS selectors to their id or class attribute values in the html for readability.</td>
+                        <td>JavaScript IS case sensitive. For instance, declaring these two variables var firstname and var firstName are two completely separate entities in JavaScript.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>HTML - CSS - JavaScript Essential Terminology</h2>
+            <table><!--table containing information about essential terminology-->
+                <thead>
+                    <tr>
+                        <th>Terminology</th>
+                        <th>Language</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><span class="htmlconcern">element</span></th>
+                        <td>HTML</td>
+                        <td>to semantically describe and structure content on a web page</td>
+                        <td>&lt;p&gt;These tags and text constitute a p (paragraph) element.&lt;/p&gt;</td>
+                    </tr>
+                    <tr>
+                        <th><span class="htmlconcern">attribute</span></th>
+                        <td>HTML</td>
+                        <td>a way for us to assign additional relevant information on how CSS may reference an HTML tag so it can be styled</td>
+                        <td>&lt;p id="xyz"&gt; the id attribute is used in the preceding paragraph tag</td>
+                    </tr>
+                    <tr>
+                        <th><span class="cssconcern">selector</span></th>
+                        <td>CSS</td>
+                        <td>a way for us to select the html elements we want to style in CSS</td>
+                        <td>#wrapper in CSS is a selector for an element in HTML with an Id attribute of wrapper</td>
+                    </tr>
+                    <tr>
+                        <th><span class="cssconcern">property</span></th>
+                        <td>CSS</td>
+                        <td>a way for us to style the particular element in CSS</td>
+                        <td>background-color is a property in CSS that can be used to change the background color of an element</td>
+                    </tr>
+                    <tr>
+                        <th><span class="cssconcern">declaration</span></th>
+                        <td>CSS</td>
+                        <td>a way for us to set one or more ways to style an element in CSS</td>
+                        <td>h1 { color: blue; background-color: black; } is a declaration that will style each h1 element on the page with blue text and a black background</td>
+                    </tr>
+                    <tr>
+                        <th><span class="jsconcern">object</span></th>
+                        <td>JavaScript</td>
+                        <td>a programmed working model of a physical real world object</td>
+                        <td>var person = {firstName = 'Kevin'}; in this example an object named person is defined</td>
+                    </tr>
+                    <tr>
+                        <th><span class="jsconcern">method</span></th>
+                        <td>JavaScript</td>
+                        <td>a set of programmed instructions that represent one task</td>
+                        <td>a user may click a button on a hotel website to check for vacancies, and the programming will reference appropriate information to inform the user if they can be accommodated.</td>
+                    </tr>
+                    <tr>
+                        <th><span class="jsconcern">event</span></th>
+                        <td>JavaScript</td>
+                        <td>a computer's way of saying "something just happened"</td>
+                        <td>user left clicks an image on a webpage once, the browser sends that event and appropriate code determines how to respond as it was programmed</td>
+                    </tr>
+                    <tr>
+                        <th><span class="jsconcern">property</span></th>
+                        <td>JavaScript</td>
+                        <td>a name/value pair that tells us something about an individual instance of an object</td>
+                        <td>var person = {firstName = 'Kevin'}; this object has a single property of firstName and has been assigned a value of Kevin</td>
+                    </tr>
+                </tbody>
+            </table>
+            <section><!--question and answer section-->
+                <h2>How do HTML id and class attributes connect to CSS selectors?</h2>
+                <p>1. <span class="coding">&lt;p id="xyz"&gt;</span>Item number xyz<span class="coding">&lt;/p&gt;</span> connects to what selector in the css?</p> Connects to the Id selector denoted by # in CSS (as in #xyz)
+                <p>2. How many html elements may have the same <span class="coding">id="xyz"</span> attribute value on a given page?</p> Only one
+                <p>3. <span class="coding">&lt;p class="holidayItem"&gt;</span>Seasonal item for sale.<span class="coding">&lt;/p&gt;</span> connects to what selector in the css?</p> Connects to the Class selector denoted by . in CSS (as in .holidayItem)
+                <p>4. How many html elements may have the same <span class="coding">class="holidayItem"</span> attribute value on a given page?</p> As many as deemed necessary
+            </section>
+            <section><!--explanation section-->
+                <h2>Essential JavaScript best practices: Explain the pros and cons of...</h2>
+                <p>1. inline vs. embedded vs. external JavaScript using examples.</p>
+                <p>Pro: Inline or Embedded JavaScript can provide for a way to easily test some idea without need of creating a new file and properly linking it within the HTML code.  External JavaScript is favored as it keeps the behavioral aspects of a webpage separate from the content and structure.</p>
+                <p>Con: Using inline or embedded JavaScript can make it harder to update specific parts of a webpage and can make it harder to read</p>
+                <p>Code Example:<br>
+                    <code>
+                        let today = new Date();<br>
+                        let hourNow = today.getHours();<br>
+                        let greeting;<br><br>
+                        
+                        if (hourNow > 18) {<br>
+                            greeting = 'Good evening!';<br>
+                        } else if (hourNow > 12) {<br>
+                            greeting = 'Good afternoon!';<br>
+                        } else if (hourNow > 0) {<br>
+                            greeting = 'Good morning!';<br>
+                        } else {<br>
+                            greeting = 'Welcome!';<br>
+                        }<br><br>
+
+                        By including all this code within a script tag in the middle of HTML code, if for some reason the JavaScript for the page breaks due to an update someone might not think to browse the HTML document itself and find these specific lines to correct.
+                    </code>
+                </p>
+                <p>2. indenting your code.</p>
+                <p>Pro: Makes the resulting page of code more readable for others to follow along and update as necessary</p>
+                <p>Con: It may take more time and if indenting is inconsistent will result in code that's harder to read</p>
+                <p>Code Example:<br>
+                    <code>
+                        if (x > 1) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+                        }<br><br>
+                        vs.<br><br>
+                        if (x > 1) { return false}
+                    </code>
+                </p>
+                <p>3. inserting code comments</p>
+                <p>Pro: Code comments are essential for documenting the work you're doing while programming.  It'll help others who update the code with important information that help explains logic or what the code is programmed to do.</p>
+                <p>Con: Code comments also take more time than straight programming without them.  If comments are too general or vague there is risk of having poorly documented code that doesn't explain itself well.</p>
+                <p>Code Example:<br>
+                    <code>
+                            // each time an h2 element is clicked random hex values are chosen and set as a gradient for the background<br>
+                            document.body.style.backgroundImage = "linear-gradient(to bottom, #" + Math.floor(Math.random()*16777215).toString(16) + ", #" + Math.floor(Math.random()*16777215).toString(16);<br><br>
+                            Without the comment someone following up on this project may wonder why random numbers are being generated and what it has to do with styling with JavaScript
+                    </code>
+                </p>
+            </section>
+            <section><!--section comparing java to javascript-->
+                <h2>Java vs. JavaScript</h2>
+            </section>
+            <ul>
+                <li>What is the general purpose for each language?<br>
+                Java is generally used to create mobile and desktop apps, web apps, games, etc.  JavaScript is used to control the behavior of a webpage and certain frameworks of JavaScript can be used to create more specific things like mobile apps.</li>
+                <li>Strict vs. loose variable typing - what does this mean as it relates to Java and JavaScript?<br>
+                Loose variable typing allows you to assign a name/value pair without first declaring the variable itself, whereas strict explicity expects a variable definition before assigning it a value.  In JavaScript, to use strict typing an instruction "use_strict"; is set at the beginning of the JavaScript document.</li>
+                <li>Where is the source code for each language compiled or interpreted?<br>
+                For Java, a Java compiler reduces source code to bytecode, then is run on a Java Virtual Machine.  In contrast, the major browsers running JavaScript have an interpreter to translate the code into something the computer can follow.</li>
+            </ul>
+        </div><!--end of wrapper div-->
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, October 22, 2019 -->
+
+<!--Code modified and adapted from https://courses.wesbos.com/account/access/5d6ec90685f96c03c1e56510/view/194158691-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Timer</title>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="js30.css">
+</head>
+<body>
+  <div class="timer">
+    <div class="timer__controls">
+      <!--Adjusted the text and data-time for these buttons to reflect possible uses in a work environment-->
+      <button data-time="60" class="timer__button">60 Seconds</button>
+      <button data-time="300" class="timer__button">5 Minute BRB</button>
+      <button data-time="900" class="timer__button">15 Minute Break</button>
+      <button data-time="1800" class="timer__button">30 Minute Meal</button>
+      <button data-time="3600" class="timer__button">60 Min Lunch Break</button>
+      <form name="customForm" id="custom">
+        <input type="text" name="minutes" placeholder="Custom Timer - Enter Minutes"><!--adjusted placeholder text to help user understand what the field is for-->
+      </form>
+    </div>
+    <div class="display">
+      <h1 class="display__time-left"></h1>
+      <p class="display__end-time"></p>
+    </div>
+  </div>
+
+  <script src="js30.js"></script>
+</body>
+</html>

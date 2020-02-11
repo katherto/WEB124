@@ -1,0 +1,64 @@
+<!-- Kevin Atherton, WEB 124 JavaScript II, October 8, 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ch5project.css" type="text/css">
+        <title>Chapter 5 Project</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p id="q1">Question 1: In a project like this is there a better way to attach all the event listeners to the buttons rather than a single line statement for each one?</p>
+            <p id="q2">Question 2: The book mentions escaping characters like &amp; and &lt;, but how do we escape these characters with JavaScript?</p>
+            <p id="q3">Question 3: What is the best practice between using previousSibling or previousElementSibling and similar?</p>
+            <ul>
+                <li id="computers">Computers
+                    <ul>
+                        <li id="networking" class="favorite">Networking</li>
+                        <li id="web">Web Development</li>
+                        <li id="data">Data Analytics</li>
+                    </ul>
+                </li>
+                <li>Business
+                    <ul>
+                        <li class="favorite">Accounting</li>
+                        <li>Finance</li>
+                        <li>Marketing</li>
+                    </ul>
+                </li>
+                <li id="autolist">Auto Technology
+                    <ul>
+                        <li id="engines" class="favorite">Engines</li>
+                        <li>Service</li>
+                        <li>Maintenance</li>
+                    </ul>
+                </li>
+                <li>Healthcare
+                    <ul>
+                        <li class="favorite">Nursing</li>
+                        <li>Pharmacy</li>
+                        <li>Dental</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Methods to traverse the DOM tree</h2>
+            <input type="button" id="button1" value="getElementById()">
+            <input type="button" id="button2" value="querySelector()">
+            <input type="button" id="button3" value="getElementsByClassName()">
+            <input type="button" id="button4" value="getElementsByTagName()">
+            <input type="button" id="button5" value="querySelectorAll()">
+            <h2>Properties to modify the DOM tree</h2>
+            <input type="button" id="button6" value="parentNode">
+            <input type="button" id="button7" value="previousSibling">
+            <input type="button" id="button8" value="nextSibling">
+            <input type="button" id="button9" value="className">
+            <h2>Methods to modify the DOM tree</h2>
+            <input type="button" id="button10" value="createElement() createTextNode() appendChild()">
+            <input type="button" id="button11" value="removeChild()">
+            <input type="button" id="button12" value="hasAttribute() removeAttribute()">
+        </div><!--end of wrapper div-->
+        <script src="ch5project.js"></script>
+    </body>
+</html>

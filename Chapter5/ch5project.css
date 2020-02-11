@@ -1,0 +1,25 @@
+/* Kevin Atherton, WEB 124 JavaScript II, October 8, 2019 */
+
+*
+                {
+                        box-sizing: border-box;
+                } /* configures universal selector for box sizing of elements */
+
+header, main, nav, footer, figure, figcaption, aside, section, article
+                {
+                        display: block;
+                } /* configures html5 elements to work in older browsers */
+
+input
+                {
+                        display: block;
+                        margin-bottom: 0.5em;
+                }
+
+#wrapper
+                {
+                        margin-left: auto;
+                        margin-right: auto;
+                        min-width: 500px;
+                        width: 80%;
+                }
